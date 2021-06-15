@@ -8,7 +8,6 @@ export interface WeatherStatsResponse {
   minTemperature: number;
 }
 
-
 export const WeatherService = {
   getStats: (numberOfDays: number): AxiosPromise<WeatherStatsResponse> => {
     return HTTP.get(`/api/weather/stats?numberOfDays=${numberOfDays}`);
